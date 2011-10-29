@@ -90,6 +90,22 @@ describe Box::File do
       clone.should_not be @dummy
     end
 
+    it "uploads a File object" do
+      @test_temp = @test_root.create('temp')
+      File.open(@vegetables) do |f|
+        @test_temp.upload(f)
+      end
+      @test_temp.files.should have(1).things
+    end
+
+    it "uploads an UploadIO object" do
+      @test_temp = @test_root.create('temp2')
+      File.open(@vegetables) do |f|
+        @test_temp.upload(UploadIO.new(f, 'text/plain', 'i_am_only_a_uploadio.txt'))
+      end
+      @test_temp.files.should have(1).things
+    end
+
     it "renames a file" do
       @dummy.rename('bandito.txt')
       @dummy.name.should == 'bandito.txt'
