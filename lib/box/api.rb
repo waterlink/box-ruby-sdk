@@ -271,20 +271,22 @@ module Box
 
     # Upload the file to the specified folder.
     #
-    # @param [String] path Upload the file at the given path.
+    # @param [String, File or UploadIO] path Upload the file at the given path, or a File or UploadIO object..
     # @param [String] folder_id The folder id of the parent folder to use.
     # @param [Optional, Boolean] new_copy Upload a new copy instead of overwriting.
     def upload(path, folder_id, new_copy = false)
-      query_upload('upload', folder_id, 'upload_ok', :file => ::File.new(path), :new_copy => new_copy)
+      path = ::File.new(path) unless path.is_a?(::UploadIO) or path.is_a?(::File)
+      query_upload('upload', folder_id, 'upload_ok', :file => path, :new_copy => new_copy)
     end
 
     # Overwrite the given file with a new one.
     #
-    # @param [String] path (see #upload)
+    # @param [String, File or UploadIO] path (see #upload)
     # @param [String] file_id Replace the file with this id.
     # @param [Optional, String] name Use a new name as well.
     def overwrite(path, file_id, name = nil)
-      query_upload('overwrite', file_id, 'upload_ok', :file => ::File.new(path), :file_name => name)
+      path = ::File.new(path) unless path.is_a?(::UploadIO) or path.is_a?(::File)
+      query_upload('overwrite', file_id, 'upload_ok', :file => path, :file_name => name)
     end
 
     # Upload a new copy of the given file.
