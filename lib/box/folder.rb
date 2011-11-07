@@ -180,7 +180,7 @@ module Box
     def find!(criteria, recursive)
       matches = (files + folders).collect do |item| # search over our files and folders
         match = criteria.all? do |key, value| # make sure all criteria pass
-          item.send(key) == value.to_s rescue false
+          value === item.send(key) rescue false
         end
 
         item if match # use the item if it is a match

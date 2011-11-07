@@ -102,6 +102,12 @@ describe Box::Folder do
           file = @root.find(:id => 7068024, :name => "notswf", :recursive => true).first
           file.should be nil
         end
+
+        it "finds using regex" do
+          folder = @root.find(:name => /T[se]{2}t\w/i, :recursive => true).first
+          folder.id.should == '7065552'
+          folder.name.should == 'tests'
+        end
       end
 
       describe "multiple results" do
@@ -114,6 +120,11 @@ describe Box::Folder do
           files = @root.find(:type => 'file', :recursive => true)
           files.should have(9).items
           files.first.name.should == 'file.pdf'
+        end
+
+        it "finds using regex" do
+          files = @root.find(:name => /expected.\d+.swf/, :recursive => true)
+          files.should have(7).items
         end
       end
     end
