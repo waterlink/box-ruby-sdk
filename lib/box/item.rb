@@ -127,7 +127,7 @@ module Box
       self
     end
 
-    # @return [String] The path of this item. This starts with a '/'.
+    # @return [String] The path of this item. This starts with a '/', unless it is root.
     def path
       "#{ parent.path + '/' if parent }#{ name }"
     end

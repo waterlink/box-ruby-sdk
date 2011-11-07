@@ -122,6 +122,62 @@ module Box
       end
     end
 
+    # Get the item at the given path.
+    #
+    # @param [String] The path to search for. This follows the typical unix
+    #                 path syntax, in that the root folder is '/'. Supports
+    #                 the dot sytax, where '.' is the current folder and
+    #                 '..' is the parent folder.
+    #
+    # @return [Item]  The item that exists at this path, or nil.
+    #
+    # @example Find a folder based on its absolute path.
+    #   folder.at('/box/is/awesome')
+    #
+    # @example Find a file based on a relative path.
+    #   folder.at('awesome/file.pdf')
+    #
+    # @example Find a folder using the parent.
+    #   folder.at('../other/folder')
+    def at(target_path)
+      # start with this folder
+      current = self
+
+      if target_path.start_with?('/')
+        # absolute path, find the root folder
+        current = current.parent while current.parent != nil
+      end
+
+      # split each part of the target path
+      target_path.split('/').each do |target_name|
+        # update current based on the target name
+        current = case target_name
+        when "", "."
+          # no-op
+          current
+        when ".."
+          # use the parent folder
+          parent
+        else
+          # must be a file/folder name, so make sure this is a folder
+          return nil unless current and current.type == 'folder'
+
+          # search for an item with that name
+          current.find(:name => target_name, :recursive => false).first
+        end
+      end
+
+      if current
+        # ends with a slash, so it has to be a folder
+        if target_path.end_with?('/') and current.type != 'folder'
+          # get the folder with the same name (if it exists)
+          current = parent.find(:type => 'folder', :name => name, :recursive => false).first
+        end
+      end
+
+      current
+    end
+
     protected
 
     attr_accessor :cached_tree
