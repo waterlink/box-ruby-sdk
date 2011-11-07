@@ -144,5 +144,15 @@ describe Box::File do
 
       @dummy.comments.should == []
     end
+
+    it "gets/sets the file description" do
+      @dummy.description.should == nil
+
+      @dummy.set_description("Hello World")
+      @dummy.description(true).should == "Hello World"
+
+      @dummy.set_description("Hello New World")
+      @dummy.description(true).should == "Hello New World"
+    end
   end
 end

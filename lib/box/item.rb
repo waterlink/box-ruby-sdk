@@ -121,7 +121,7 @@ module Box
     #
     # @param [String] message The description message to use.
     # @return [Item] self
-    def description(message)
+    def set_description(message)
       @api.set_description(type, id, message)
 
       self

@@ -43,6 +43,16 @@ describe Box::Folder do
       @dummy.create('todelete').delete
       @dummy.folders.should have(0).items
     end
+
+    it "gets/sets the folder description" do
+      @dummy.description.should == ""
+
+      @dummy.set_description("Hello World")
+      @dummy.description(true).should == "Hello World"
+
+      @dummy.set_description("Hello New World")
+      @dummy.description(true).should == "Hello New World"
+    end
   end
 
   context "using fake tree" do
