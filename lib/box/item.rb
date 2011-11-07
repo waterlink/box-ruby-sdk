@@ -1,3 +1,5 @@
+require 'box/comment'
+
 module Box
   # Represents a folder or file stored on Box. Any attributes or actions
   # typical to a Box item can be accessed through this class. The {Item}
@@ -139,11 +141,20 @@ module Box
       # convert to a string
       str = sym.to_s
 
+      # determine whether to refresh the cache
+      refresh = args ? args.first : false
+
       # return the value if it already exists
-      return @data[str] if @data.key?(str)
+      return @data[str] if not refresh and @data.key?(str)
 
       # value didn't exist, so try to update the info
-      self.info
+      # TODO: Figure out a good way to work with multiple sources.
+      case str
+      when 'comments'
+        self.get_comments
+      when
+        self.info(refresh)
+      end
 
       # try returning the value again
       return @data[str] if @data.key?(str)

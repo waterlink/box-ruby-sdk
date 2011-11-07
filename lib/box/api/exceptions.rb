@@ -71,6 +71,9 @@ module Box
         AccountExceeded
       when "filesize_limit_exceeded"
         SizeExceeded
+      # Comment specific responses
+      when "get_comments_error", "add_comment_error", "delete_comment_error"
+        Generic
       else
         Unknown
       end

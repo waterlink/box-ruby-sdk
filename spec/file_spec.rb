@@ -117,5 +117,32 @@ describe Box::File do
       @dummy.parent.should be nil
       @test_root.files.should have(0).things
     end
+
+    it "gets file comments" do
+      @dummy.comments.should == []
+
+      c1 = @dummy.add_comment("Hello World!")
+      c2 = @dummy.add_comment("foo bar")
+
+      temp = @dummy.comments(true).collect { |c| [ c.id, c.message ] }
+      temp.should == [ [ c1.id, c1.message ], [ c2.id, c2.message ] ]
+    end
+
+    it "adds file comment" do
+      c1 = @dummy.add_comment("Hello world")
+      c1.id.should_not == nil
+      c1.message.should == "Hello world"
+
+      c2 = @dummy.comments.first
+      c1.id.should == c2.id
+      c1.message.should == c2.message
+    end
+
+    it "deletes file comment" do
+      comment = @dummy.add_comment("Hello world")
+      comment.delete.should == true
+
+      @dummy.comments.should == []
+    end
   end
 end

@@ -40,6 +40,26 @@ module Box
       self.class.new(api, parent, info)
     end
 
+    # Get the comments left on this file.
+    #
+    # @return [Array] An array of {Comment}s.
+    def get_comments
+      comments = @api.get_comments(type, id)['comments']
+
+      comments = Comment.create(@api, comments['comment']) if comments
+
+      @data['comments'] = comments || Array.new
+    end
+
+    # Add a comment to the file.
+    #
+    # @return [Comment] The created comment.
+    def add_comment(message)
+      response = @api.add_comment(type, id, message)
+
+      Comment.create(@api, response['comment']).first
+    end
+
     protected
 
     # (see Item#get_info)

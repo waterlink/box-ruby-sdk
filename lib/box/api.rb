@@ -129,7 +129,7 @@ module Box
         end
       end
 
-      raise ErrorStatus, response.code unless response.success? # when the http return code is not normal
+      raise ErrorStatus, "HTTP code #{ response.code }" unless response.success? # when the http return code is not normal
       response
     end
 
@@ -297,6 +297,30 @@ module Box
     # TODO: Verfiy this does what I think it does
     def new_copy(path, file_id, name = nil)
       query_upload('new_copy', file_id, 'upload_ok', :file => ::File.new(path), :new_file_name => name)
+    end
+
+    # Gets the comments posted on the given item.
+    #
+    # @param ["file"] target The type of item.
+    # @param [String] target_id The id of the item to get.
+    def get_comments(target, target_id)
+      query_rest('get_comments_ok', :action => :get_comments, :target => target, :target_id => target_id)
+    end
+
+    # Adds a new comment to the given item.
+    #
+    # @param ["file"] target The type of item.
+    # @param [String] target_id The id of the item to add to.
+    # @param [String] message The message to use.
+    def add_comment(target, target_id, message)
+      query_rest('add_comment_ok', :action => :add_comment, :target => target, :target_id => target_id, :message => message)
+    end
+
+    # Deletes a given comment.
+    #
+    # @param [String] comment_id The id of the comment to delete.
+    def delete_comment(comment_id)
+      query_rest('delete_comment_ok', :action => :delete_comment, :target_id => comment_id)
     end
   end
 end
