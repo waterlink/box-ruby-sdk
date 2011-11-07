@@ -24,7 +24,7 @@ account = Box::Account.new(app_data['api_key'])
 auth_token = app_data['auth_token']
 
 # now we have enough information to log into the box api, so we try to authorize using the auth token
-account.authorize(auth_token) do |auth_url|
+account.authorize(:auth_token => auth_token) do |auth_url|
   # this block is called if the auth_token is invalid or missing
 
   # we use launchy to open a new browser, but you can do it however you want

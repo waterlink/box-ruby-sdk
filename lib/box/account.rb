@@ -42,7 +42,7 @@ module Box
       true
     end
 
-    # Authorize the account using the given auth token, or request
+    # Authorize the account using the given auth token/ticket, or request
     # permission from the user to let this application use their account.
     #
     # An auth token can be reused from previous authorizations provided the
@@ -51,8 +51,18 @@ module Box
     # normally and requires the user to log in and provide access for their
     # account.
     #
-    # @param [Optional, String] auth_token Uses an existing token or requests
-    #        a new one if nil.
+    # A ticket can be used for applications that do not block on the user,
+    # such as a website, where specifying a redirection url is not possible.
+    #
+    # In order to maintain backwards compatibility, a ticket can only be
+    # specified in the hash syntax, while an auth token can be used in
+    # either the hash or string syntax.
+    #
+    # @param [Optional, String, Hash{:ticket,:auth_token => String}] details
+    #        Uses an existing auth token or ticket. If nil, a new ticket
+    #        will be generated and used. If a String, it is assumed to be
+    #        an auth_token (depreciated). If a Hash, then any values of
+    #        the :ticket and :auth_token keys will be used to authenticate.
     # @yield [authorize_url] This block called when the user has not yet
     #        granted this application permission to use their account. You
     #        must have the user navigate to the passed url and authorize
@@ -68,15 +78,24 @@ module Box
     #
     # @example Authorize an account using an existing auth token.
     #   auth_token = "saved auth token" # load from file ideally
-    #   account.authorize(auth_token)
+    #   account.authorize(:auth_token => auth_token)
     #
     # @example Combining the above two for the best functionality.
     #   auth_token = "saved auth token" # load from file if possible
-    #   account.authorize(auth_token) do |auth_url|
+    #   account.authorize(:auth_token => auth_token) do |auth_url|
     #     # auth token was invalid or nil, have the user visit auth_url
     #   end
     #
-    def authorize(auth_token = nil)
+    def authorize(details = nil)
+      # for backwards compatibility
+      if details.is_a?(Hash)
+        auth_token = details[:auth_token]
+        ticket = details[:ticket]
+      else
+        auth_token = details
+        ticket = nil
+      end
+
       # use a saved auth token if it is given
       if auth_token
         return true if authorize_token(auth_token)
@@ -84,12 +103,12 @@ module Box
 
       # the auth token either failed or was not provided
       # we must try to authorize a ticket, and call the block if that fails
-      if not authorize_ticket and block_given?
+      if not authorize_ticket(ticket) and block_given?
         # the supplied block should instruct the user to visit this url
-        yield authorize_url
+        yield authorize_url(ticket)
 
         # try authorizing once more
-        authorize_ticket
+        authorize_ticket(ticket)
       end
 
       # return our authorized status
@@ -152,16 +171,16 @@ module Box
       @info != nil
     end
 
-    protected
-
-    # @return [Api] The api currently in use.
-    attr_reader :api
-
     # Get the cached ticket or request a new one from the Box api.
     # @return [String] The authorization ticket.
     def ticket
       @ticket ||= @api.get_ticket['ticket']
     end
+
+    protected
+
+    # @return [Api] The api currently in use.
+    attr_reader :api
 
     # The url the user needs to visit in order to grant this application
     # permission to use their account. This requires a ticket, which
@@ -171,7 +190,8 @@ module Box
     #         If no ticket is provided, one will be requested and cached.
     # @return [String] the url used for authorizing this account.
     #
-    def authorize_url(ticket = self.ticket)
+    def authorize_url(ticket = nil)
+      ticket = self.ticket unless ticket
       "#{ api.base_url }/auth/#{ ticket }"
     end
 
@@ -183,7 +203,9 @@ module Box
     #         If no ticket is provided, one will be requested and cached.
     # @return [String, nil] The auth token if successful otherwise, nil.
     #
-    def authorize_ticket(ticket = self.ticket)
+    def authorize_ticket(ticket = nil)
+      ticket = self.ticket unless ticket
+
       begin
         response = @api.get_auth_token(ticket)
 

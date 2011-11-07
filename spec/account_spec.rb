@@ -14,6 +14,10 @@ describe Box::Account do
     end
 
     it "authorizes using auth token" do
+      @account.authorize(:auth_token => ACCOUNT['auth_token']).should == true
+    end
+
+    it "authorizes using auth token (backwards-compatible)" do
       @account.authorize(ACCOUNT['auth_token']).should == true
     end
   end

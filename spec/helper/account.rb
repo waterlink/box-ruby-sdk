@@ -8,7 +8,7 @@ end
 
 def get_account(auth = true)
   Box::Account.new(get_api).tap do |account|
-    account.authorize(ACCOUNT['auth_token']) if auth
+    account.authorize(:auth_token => ACCOUNT['auth_token']) if auth
   end
 end
 
