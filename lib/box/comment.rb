@@ -26,6 +26,8 @@ module Box
       @data = data
     end
 
+    def id; @data['id']; end
+
     def method_missing(sym, *args, &block)
       # TODO: Use symbols instead of strings for keys.
       sym = sym.to_s
