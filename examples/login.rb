@@ -51,7 +51,7 @@ File.open(app_data_file, 'w') do |file|
 end
 
 # we managed to log in successfully!
-puts "Logged in as #{ account.info['login'] }"
+puts "Logged in as #{ account.login }"
 
 # this is so the other example can access the account variable (bad practice)
 @account = account

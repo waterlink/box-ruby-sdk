@@ -177,6 +177,21 @@ module Box
       @ticket ||= @api.get_ticket['ticket']
     end
 
+    # Provides an easy way to access this account's info.
+    #
+    # @example
+    #   account.login # returns @info['login']
+    def method_missing(sym, *args, &block)
+      super unless authorized?
+
+      # TODO: Use symbols instead of strings
+      str = sym.to_s
+
+      return @info[str] if @info.key?(str)
+
+      super
+    end
+
     protected
 
     # @return [Api] The api currently in use.
