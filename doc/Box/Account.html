@@ -6,7 +6,7 @@
 <title>
   Class: Box::Account
   
-    &mdash; Documentation by YARD 0.7.2
+    &mdash; Documentation by YARD 0.7.3
   
 </title>
 
@@ -94,18 +94,18 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-Represents an account on Box. In order to use the Box api, the user must
+    
+<p>Represents an account on Box. In order to use the Box api, the user must
 first grant the application permission to use their account. This is done
 in the <span class='object_link'><a href="#authorize-instance_method" title="Box::Account#authorize (method)">#authorize</a></span> function. Once an account has been authorized, it can
-access all of the details and information stored on that account.
-</p>
+access all of the details and information stored on that account.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
@@ -130,9 +130,8 @@ access all of the details and information stored on that account.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The auth token if authorization was successful.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The auth token if authorization was successful.</p>
 </div></span>
   
 </li>
@@ -154,7 +153,7 @@ The auth token if authorization was successful.
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#authorize-instance_method" title="#authorize (instance method)">- (Boolean) <strong>authorize</strong>(auth_token = nil) {|authorize_url| ... }</a>
+      <a href="#authorize-instance_method" title="#authorize (instance method)">- (Boolean) <strong>authorize</strong>(details = nil) {|authorize_url| ... }</a>
     
 
     
@@ -167,10 +166,9 @@ The auth token if authorization was successful.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Authorize the account using the given auth token, or request permission
-from the user to let this application use their account.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Authorize the account using the given auth token/ticket, or request
+permission from the user to let this application use their account.</p>
 </div></span>
   
 </li>
@@ -192,9 +190,8 @@ from the user to let this application use their account.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Is the account authorized?.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Is the account authorized?.</p>
 </div></span>
   
 </li>
@@ -216,9 +213,8 @@ Is the account authorized?.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Return the account details.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Return the account details.</p>
 </div></span>
   
 </li>
@@ -242,9 +238,8 @@ Return the account details.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Creates an account object using the given Box api key.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Creates an account object using the given Box api key.</p>
 </div></span>
   
 </li>
@@ -266,9 +261,31 @@ Creates an account object using the given Box api key.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Log out of the account and invalidate the auth token.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Log out of the account and invalidate the auth token.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-instance_method" title="#method_missing (instance method)">- (Object) <strong>method_missing</strong>(sym, *args, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides an easy way to access this account's info.</p>
 </div></span>
   
 </li>
@@ -290,10 +307,30 @@ Log out of the account and invalidate the auth token.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Register a new account on the Box website with the given details.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Register a new account on the Box website with the given details.</p>
 </div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to%3F-instance_method" title="#respond_to? (instance method)">- (Boolean) <strong>respond_to?</strong>(sym) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -314,9 +351,31 @@ Register a new account on the Box website with the given details.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Get the root folder of the account.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Get the root folder of the account.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ticket-instance_method" title="#ticket (instance method)">- (String) <strong>ticket</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the cached ticket or request a new one from the Box api.</p>
 </div></span>
   
 </li>
@@ -337,10 +396,9 @@ Get the root folder of the account.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Creates an account object using the given Box api key. You can then
-<span class='object_link'><a href="#register-instance_method" title="Box::Account#register (method)">#register</a></span> a new account or <span class='object_link'><a href="#authorize-instance_method" title="Box::Account#authorize (method)">#authorize</a></span> an existing account.
-</p>
+    
+<p>Creates an account object using the given Box api key. You can then
+<span class='object_link'><a href="#register-instance_method" title="Box::Account#register (method)">#register</a></span> a new account or <span class='object_link'><a href="#authorize-instance_method" title="Box::Account#authorize (method)">#authorize</a></span> an existing account.</p>
 
 
   </div>
@@ -359,14 +417,14 @@ Creates an account object using the given Box api key. You can then
       
       
         &mdash;
-        <div class='inline'><p>
-the api key to use for the Box api.
-</p>
+        <div class='inline'>
+<p>the api key to use for the Box api.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -396,6 +454,75 @@ the api key to use for the Box api.
 </div>
   
 </div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <p class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(sym, *args, &amp;block) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides an easy way to access this account's info.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='id account'>account</span><span class='period'>.</span><span class='id login'>login</span> <span class='comment'># returns @info['login']</span></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='id method_missing'>method_missing</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='comma'>,</span> <span class='op'>*</span><span class='id args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id authorized?'>authorized?</span>
+
+  <span class='comment'># TODO: Use symbols instead of strings
+</span>  <span class='id str'>str</span> <span class='op'>=</span> <span class='id sym'>sym</span><span class='period'>.</span><span class='id to_s'>to_s</span>
+
+  <span class='kw'>return</span> <span class='ivar'>@info</span><span class='lbracket'>[</span><span class='id str'>str</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='ivar'>@info</span><span class='period'>.</span><span class='id key?'>key?</span><span class='lparen'>(</span><span class='id str'>str</span><span class='rparen'>)</span>
+
+  <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
 
   <div id="instance_attr_details" class="attr_details">
     <h2>Instance Attribute Details</h2>
@@ -412,15 +539,15 @@ the api key to use for the Box api.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The auth token if authorization was successful.
-</p>
+    
+<p>The auth token if authorization was successful.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -431,9 +558,8 @@ The auth token if authorization was successful.
       
       
         &mdash;
-        <div class='inline'><p>
-The auth token if authorization was successful.
-</p>
+        <div class='inline'>
+<p>The auth token if authorization was successful.</p>
 </div>
       
     </li>
@@ -471,22 +597,27 @@ The auth token if authorization was successful.
       <div class="method_details first">
   <p class="signature first" id="authorize-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>authorize</strong>(auth_token = nil) {|authorize_url| ... }
+    - (<tt>Boolean</tt>) <strong>authorize</strong>(details = nil) {|authorize_url| ... }
   
 
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Authorize the account using the given auth token, or request permission
-from the user to let this application use their account.
-</p>
-<p>
-An auth token can be reused from previous authorizations provided the user
-doesn&#8217;t log out, and significantly speeds up the process. If the auth
-token if invalid or not provided, the account tries to log in normally and
-requires the user to log in and provide access for their account.
-</p>
+    
+<p>Authorize the account using the given auth token/ticket, or request
+permission from the user to let this application use their account.</p>
+
+<p>An auth token can be reused from previous authorizations provided the user
+doesn't log out, and significantly speeds up the process. If the auth token
+if invalid or not provided, the account tries to log in normally and
+requires the user to log in and provide access for their account.</p>
+
+<p>A ticket can be used for applications that do not block on the user, such
+as a website, where specifying a redirection url is not possible.</p>
+
+<p>In order to maintain backwards compatibility, a ticket can only be
+specified in the hash syntax, while an auth token can be used in either the
+hash or string syntax.</p>
 
 
   </div>
@@ -496,9 +627,8 @@ requires the user to log in and provide access for their account.
   <div class="examples">
     <h3>Examples:</h3>
     
-      <h4><div class='inline'><p>
-Authorize an account without a saved auth token.
-</p>
+      <h4><div class='inline'>
+<p>Authorize an account without a saved auth token.</p>
 </div></h4>
       <pre class="example code"><span class='id account'>account</span><span class='period'>.</span><span class='id authorize'>authorize</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id auth_url'>auth_url</span><span class='op'>|</span>
   <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Please visit </span><span class='embexpr_beg'>#{</span> <span class='id auth_url'>auth_url</span> <span class='rbrace'>}</span><span class='tstring_content'> and enter your account infomation</span><span class='tstring_end'>&quot;</span></span>
@@ -506,19 +636,17 @@ Authorize an account without a saved auth token.
   <span class='id gets'>gets</span> <span class='comment'># wait for the enter key to be pressed
 </span><span class='kw'>end</span></pre>
     
-      <h4><div class='inline'><p>
-Authorize an account using an existing auth token.
-</p>
+      <h4><div class='inline'>
+<p>Authorize an account using an existing auth token.</p>
 </div></h4>
       <pre class="example code"><span class='id auth_token'>auth_token</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>saved auth token</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># load from file ideally
-</span><span class='id account'>account</span><span class='period'>.</span><span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='id auth_token'>auth_token</span><span class='rparen'>)</span></pre>
+</span><span class='id account'>account</span><span class='period'>.</span><span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='symbol'>:auth_token</span> <span class='op'>=&gt;</span> <span class='id auth_token'>auth_token</span><span class='rparen'>)</span></pre>
     
-      <h4><div class='inline'><p>
-Combining the above two for the best functionality.
-</p>
+      <h4><div class='inline'>
+<p>Combining the above two for the best functionality.</p>
 </div></h4>
       <pre class="example code"><span class='id auth_token'>auth_token</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>saved auth token</span><span class='tstring_end'>&quot;</span></span> <span class='comment'># load from file if possible
-</span><span class='id account'>account</span><span class='period'>.</span><span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='id auth_token'>auth_token</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id auth_url'>auth_url</span><span class='op'>|</span>
+</span><span class='id account'>account</span><span class='period'>.</span><span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='symbol'>:auth_token</span> <span class='op'>=&gt;</span> <span class='id auth_token'>auth_token</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id auth_url'>auth_url</span><span class='op'>|</span>
   <span class='comment'># auth token was invalid or nil, have the user visit auth_url
 </span><span class='kw'>end</span></pre>
     
@@ -528,24 +656,27 @@ Combining the above two for the best functionality.
   
     <li>
       
-        <span class='name'>auth_token</span>
+        <span class='name'>details</span>
       
       
-        <span class='type'>(<tt>Optional</tt>, <tt>String</tt>)</span>
+        <span class='type'>(<tt>Optional</tt>, <tt>String</tt>, <tt>Hash{:ticket,:auth_token =&gt; String}</tt>)</span>
       
       
         <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>
-Uses an existing token or requests a new one if nil.
-</p>
+        <div class='inline'>
+<p>Uses an existing auth token or ticket. If nil, a new ticket will be
+generated and used. If a String, it is assumed to be an auth_token
+(depreciated). If a Hash, then any values of the :ticket and :auth_token
+keys will be used to authenticate.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Yields:</h3>
 <ul class="yield">
   
@@ -557,11 +688,10 @@ Uses an existing token or requests a new one if nil.
       
       
         &mdash;
-        <div class='inline'><p>
-This block called when the user has not yet granted this application
+        <div class='inline'>
+<p>This block called when the user has not yet granted this application
 permission to use their account. You must have the user navigate to the
-passed url and authorize this app before continuing.
-</p>
+passed url and authorize this app before continuing.</p>
 </div>
       
     </li>
@@ -578,9 +708,8 @@ passed url and authorize this app before continuing.
       
       
         &mdash;
-        <div class='inline'><p>
-Whether the user is authorized.
-</p>
+        <div class='inline'>
+<p>Whether the user is authorized.</p>
 </div>
       
     </li>
@@ -593,16 +722,6 @@ Whether the user is authorized.
       <pre class="lines">
 
 
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
 89
 90
 91
@@ -611,12 +730,40 @@ Whether the user is authorized.
 94
 95
 96
-97</pre>
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 89</span>
 
-<span class='kw'>def</span> <span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='id auth_token'>auth_token</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id authorize'>authorize</span><span class='lparen'>(</span><span class='id details'>details</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='comment'># for backwards compatibility
+</span>  <span class='kw'>if</span> <span class='id details'>details</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+    <span class='id auth_token'>auth_token</span> <span class='op'>=</span> <span class='id details'>details</span><span class='lbracket'>[</span><span class='symbol'>:auth_token</span><span class='rbracket'>]</span>
+    <span class='id ticket'>ticket</span> <span class='op'>=</span> <span class='id details'>details</span><span class='lbracket'>[</span><span class='symbol'>:ticket</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='id auth_token'>auth_token</span> <span class='op'>=</span> <span class='id details'>details</span>
+    <span class='id ticket'>ticket</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='kw'>end</span>
+
   <span class='comment'># use a saved auth token if it is given
 </span>  <span class='kw'>if</span> <span class='id auth_token'>auth_token</span>
     <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id authorize_token'>authorize_token</span><span class='lparen'>(</span><span class='id auth_token'>auth_token</span><span class='rparen'>)</span>
@@ -624,12 +771,12 @@ Whether the user is authorized.
 
   <span class='comment'># the auth token either failed or was not provided
 </span>  <span class='comment'># we must try to authorize a ticket, and call the block if that fails
-</span>  <span class='kw'>if</span> <span class='kw'>not</span> <span class='id authorize_ticket'>authorize_ticket</span> <span class='kw'>and</span> <span class='id block_given?'>block_given?</span>
+</span>  <span class='kw'>if</span> <span class='kw'>not</span> <span class='id authorize_ticket'>authorize_ticket</span><span class='lparen'>(</span><span class='id ticket'>ticket</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id block_given?'>block_given?</span>
     <span class='comment'># the supplied block should instruct the user to visit this url
-</span>    <span class='kw'>yield</span> <span class='id authorize_url'>authorize_url</span>
+</span>    <span class='kw'>yield</span> <span class='id authorize_url'>authorize_url</span><span class='lparen'>(</span><span class='id ticket'>ticket</span><span class='rparen'>)</span>
 
     <span class='comment'># try authorizing once more
-</span>    <span class='id authorize_ticket'>authorize_ticket</span>
+</span>    <span class='id authorize_ticket'>authorize_ticket</span><span class='lparen'>(</span><span class='id ticket'>ticket</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='comment'># return our authorized status
@@ -649,15 +796,15 @@ Whether the user is authorized.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Is the account authorized?
-</p>
+    
+<p>Is the account authorized?</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -668,9 +815,8 @@ Is the account authorized?
       
       
         &mdash;
-        <div class='inline'><p>
-Is the account authorized?
-</p>
+        <div class='inline'>
+<p>Is the account authorized?</p>
 </div>
       
     </li>
@@ -683,12 +829,12 @@ Is the account authorized?
       <pre class="lines">
 
 
-151
-152
-153</pre>
+170
+171
+172</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id authorized?'>authorized?</span>
   <span class='ivar'>@info</span> <span class='op'>!=</span> <span class='kw'>nil</span>
@@ -707,13 +853,11 @@ Is the account authorized?
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Return the account details. A cached copy will be used if avaliable, and
-requested if it is not.
-</p>
-<p>
-TODO: Add url to Box api documentation, and provide the current fields.
-</p>
+    
+<p>Return the account details. A cached copy will be used if avaliable, and
+requested if it is not.</p>
+
+<p>TODO: Add url to Box api documentation, and provide the current fields.</p>
 
 
   </div>
@@ -734,14 +878,14 @@ TODO: Add url to Box api documentation, and provide the current fields.
       
       
         &mdash;
-        <div class='inline'><p>
-Will not use the cached version if true.
-</p>
+        <div class='inline'>
+<p>Will not use the cached version if true.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -753,11 +897,10 @@ Will not use the cached version if true.
       
       
         &mdash;
-        <div class='inline'><p>
-A hash containing all of the user&#8217;s account details, or nil if they
-are not authorized. Please see the Box api documentation for information
-about each field.
-</p>
+        <div class='inline'>
+<p>A hash containing all of the user's account details, or nil if they are not
+authorized. Please see the Box api documentation for information about each
+field.</p>
 </div>
       
     </li>
@@ -770,20 +913,20 @@ about each field.
       <pre class="lines">
 
 
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137</pre>
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id info'>info</span><span class='lparen'>(</span><span class='id refresh'>refresh</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='ivar'>@info</span> <span class='kw'>if</span> <span class='ivar'>@info</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id refresh'>refresh</span>
@@ -813,22 +956,21 @@ about each field.
     
   <div class="note notetag">
     <strong>Note:</strong> 
-    <div class='inline'><p>
-The user will have to re-authorize if they wish to use this application,
-and the auth token will no longer work.
-</p>
+    <div class='inline'>
+<p>The user will have to re-authorize if they wish to use this application,
+and the auth token will no longer work.</p>
 </div>
   </div>
 
-<p>
-Log out of the account and invalidate the auth token.
-</p>
+
+<p>Log out of the account and invalidate the auth token.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -839,9 +981,8 @@ Log out of the account and invalidate the auth token.
       
       
         &mdash;
-        <div class='inline'><p>
-Whether logout was successful.
-</p>
+        <div class='inline'>
+<p>Whether logout was successful.</p>
 </div>
       
     </li>
@@ -854,19 +995,19 @@ Whether logout was successful.
       <pre class="lines">
 
 
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115</pre>
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 125</span>
 
 <span class='kw'>def</span> <span class='id logout'>logout</span>
   <span class='kw'>begin</span>
@@ -892,9 +1033,8 @@ Whether logout was successful.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Register a new account on the Box website with the given details.
-</p>
+    
+<p>Register a new account on the Box website with the given details.</p>
 
 
   </div>
@@ -913,9 +1053,8 @@ Register a new account on the Box website with the given details.
       
       
         &mdash;
-        <div class='inline'><p>
-The email address to create the account with
-</p>
+        <div class='inline'>
+<p>The email address to create the account with</p>
 </div>
       
     </li>
@@ -930,14 +1069,14 @@ The email address to create the account with
       
       
         &mdash;
-        <div class='inline'><p>
-The password to create the account with
-</p>
+        <div class='inline'>
+<p>The password to create the account with</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -949,9 +1088,8 @@ The password to create the account with
       
       
         &mdash;
-        <div class='inline'><p>
-Whether registration was successful.
-</p>
+        <div class='inline'>
+<p>Whether registration was successful.</p>
 </div>
       
     </li>
@@ -968,9 +1106,8 @@ Whether registration was successful.
       
       
         &mdash;
-        <div class='inline'><p>
-The email address was invalid
-</p>
+        <div class='inline'>
+<p>The email address was invalid</p>
 </div>
       
     </li>
@@ -983,9 +1120,8 @@ The email address was invalid
       
       
         &mdash;
-        <div class='inline'><p>
-The email address was taken
-</p>
+        <div class='inline'>
+<p>The email address was taken</p>
 </div>
       
     </li>
@@ -1024,6 +1160,56 @@ The email address was taken
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="respond_to?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>respond_to?</strong>(sym) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='rparen'>)</span>
+  <span class='ivar'>@info</span><span class='period'>.</span><span class='id key?'>key?</span><span class='lparen'>(</span><span class='id sym'>sym</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='kw'>super</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="root-instance_method">
   
     - (<tt><span class='object_link'><a href="Folder.html" title="Box::Folder (class)">Folder</a></span></tt>) <strong>root</strong> 
@@ -1032,17 +1218,17 @@ The email address was taken
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Get the root folder of the account. You can use this <span class='object_link'><a href="Folder.html" title="Box::Folder (class)">Folder</a></span> object to
+    
+<p>Get the root folder of the account. You can use this <span class='object_link'><a href="Folder.html" title="Box::Folder (class)">Folder</a></span> object to
 access all sub items within the account. This folder is lazy loaded, and a
-network request will be made if/when the data is requested.
-</p>
+network request will be made if/when the data is requested.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -1053,9 +1239,8 @@ network request will be made if/when the data is requested.
       
       
         &mdash;
-        <div class='inline'><p>
-A folder object representing the root folder.
-</p>
+        <div class='inline'>
+<p>A folder object representing the root folder.</p>
 </div>
       
     </li>
@@ -1068,17 +1253,74 @@ A folder object representing the root folder.
       <pre class="lines">
 
 
-145
-146
-147
-148</pre>
+164
+165
+166
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 164</span>
 
 <span class='kw'>def</span> <span class='id root'>root</span>
   <span class='kw'>return</span> <span class='ivar'>@root</span> <span class='kw'>if</span> <span class='ivar'>@root</span>
   <span class='ivar'>@root</span> <span class='op'>=</span> <span class='const'>Box</span><span class='op'>::</span><span class='const'>Folder</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='ivar'>@api</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ticket-instance_method">
+  
+    - (<tt>String</tt>) <strong>ticket</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the cached ticket or request a new one from the Box api.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The authorization ticket.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+176
+177
+178</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/account.rb', line 176</span>
+
+<span class='kw'>def</span> <span class='id ticket'>ticket</span>
+  <span class='ivar'>@ticket</span> <span class='op'>||=</span> <span class='ivar'>@api</span><span class='period'>.</span><span class='id get_ticket'>get_ticket</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ticket</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1090,9 +1332,9 @@ A folder object representing the root folder.
 </div>
     
     <div id="footer">
-  Generated on Mon Aug  8 13:05:22 2011 by 
+  Generated on Tue Nov  8 15:32:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.2 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>

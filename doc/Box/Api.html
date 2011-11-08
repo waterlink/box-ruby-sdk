@@ -6,7 +6,7 @@
 <title>
   Class: Box::Api
   
-    &mdash; Documentation by YARD 0.7.2
+    &mdash; Documentation by YARD 0.7.3
   
 </title>
 
@@ -100,17 +100,17 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>
-A wrapper and interface to the Box api. Please visit the Box developers
+    
+<p>A wrapper and interface to the Box api. Please visit the Box developers
 site for a full explaination of what each of the Box api methods expect and
-perform. TODO: Link to the site.
-</p>
+perform. TODO: Link to the site.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
    
@@ -146,9 +146,8 @@ perform. TODO: Link to the site.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The base url of the box api.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The base url of the box api.</p>
 </div></span>
   
 </li>
@@ -173,9 +172,8 @@ The base url of the box api.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-The upload url of the box api.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>The upload url of the box api.</p>
 </div></span>
   
 </li>
@@ -211,9 +209,8 @@ The upload url of the box api.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Given a status, returning a cooresponding Exception class.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Given a status, returning a cooresponding Exception class.</p>
 </div></span>
   
 </li>
@@ -231,6 +228,29 @@ Given a status, returning a cooresponding Exception class.
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#add_comment-instance_method" title="#add_comment (instance method)">- (Object) <strong>add_comment</strong>(target, target_id, message) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds a new comment to the given item.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#copy-instance_method" title="#copy (instance method)">- (Object) <strong>copy</strong>(target, target_id, destination_id) </a>
     
 
@@ -244,9 +264,8 @@ Given a status, returning a cooresponding Exception class.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Copy the the item to a new destination.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Copy the the item to a new destination.</p>
 </div></span>
   
 </li>
@@ -268,9 +287,8 @@ Copy the the item to a new destination.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Create a new folder.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new folder.</p>
 </div></span>
   
 </li>
@@ -292,9 +310,31 @@ Create a new folder.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Delete the item.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Delete the item.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_comment-instance_method" title="#delete_comment (instance method)">- (Object) <strong>delete_comment</strong>(comment_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes a given comment.</p>
 </div></span>
   
 </li>
@@ -316,9 +356,31 @@ Delete the item.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Download the file to the given path.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Download the file to the given path.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#file_embed-instance_method" title="#file_embed (instance method)">- (Object) <strong>file_embed</strong>(id, options = Hash.new) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Request the HTML embed code for a file.</p>
 </div></span>
   
 </li>
@@ -340,9 +402,8 @@ Download the file to the given path.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Get the user&#8217;s account info.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Get the user's account info.</p>
 </div></span>
   
 </li>
@@ -364,9 +425,8 @@ Get the user&#8217;s account info.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Get the entire tree of a given folder.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Get the entire tree of a given folder.</p>
 </div></span>
   
 </li>
@@ -388,9 +448,31 @@ Get the entire tree of a given folder.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Request an auth token given a ticket.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Request an auth token given a ticket.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_comments-instance_method" title="#get_comments (instance method)">- (Object) <strong>get_comments</strong>(target, target_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Gets the comments posted on the given item.</p>
 </div></span>
   
 </li>
@@ -412,9 +494,8 @@ Request an auth token given a ticket.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Get the file info.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Get the file info.</p>
 </div></span>
   
 </li>
@@ -436,9 +517,8 @@ Get the file info.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Request a ticket for authorization.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Request a ticket for authorization.</p>
 </div></span>
   
 </li>
@@ -460,9 +540,8 @@ Request a ticket for authorization.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Handle the response of the request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Handle the response of the request.</p>
 </div></span>
   
 </li>
@@ -486,9 +565,8 @@ Handle the response of the request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Create a new API object using the given parameters.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new API object using the given parameters.</p>
 </div></span>
   
 </li>
@@ -510,9 +588,8 @@ Create a new API object using the given parameters.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Request the user be logged out.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Request the user be logged out.</p>
 </div></span>
   
 </li>
@@ -534,9 +611,8 @@ Request the user be logged out.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Move the item to a new destination.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Move the item to a new destination.</p>
 </div></span>
   
 </li>
@@ -558,9 +634,8 @@ Move the item to a new destination.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Upload a new copy of the given file.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Upload a new copy of the given file.</p>
 </div></span>
   
 </li>
@@ -582,9 +657,8 @@ Upload a new copy of the given file.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Overwrite the given file with a new one.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Overwrite the given file with a new one.</p>
 </div></span>
   
 </li>
@@ -606,9 +680,8 @@ Overwrite the given file with a new one.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Make a download request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Make a download request.</p>
 </div></span>
   
 </li>
@@ -630,9 +703,8 @@ Make a download request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Make a raw request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Make a raw request.</p>
 </div></span>
   
 </li>
@@ -654,9 +726,8 @@ Make a raw request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Make a normal REST request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Make a normal REST request.</p>
 </div></span>
   
 </li>
@@ -678,9 +749,8 @@ Make a normal REST request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Make an upload request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Make an upload request.</p>
 </div></span>
   
 </li>
@@ -702,9 +772,8 @@ Make an upload request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Register a new user.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Register a new user.</p>
 </div></span>
   
 </li>
@@ -726,9 +795,8 @@ Register a new user.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Rename the item.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Rename the item.</p>
 </div></span>
   
 </li>
@@ -750,9 +818,8 @@ Rename the item.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Add the auth token to every request.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Add the auth token to every request.</p>
 </div></span>
   
 </li>
@@ -774,9 +841,8 @@ Add the auth token to every request.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Set the item description.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Set the item description.</p>
 </div></span>
   
 </li>
@@ -798,9 +864,8 @@ Set the item description.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Upload the file to the specified folder.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Upload the file to the specified folder.</p>
 </div></span>
   
 </li>
@@ -822,9 +887,8 @@ Upload the file to the specified folder.
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
-Verify a registration email.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>Verify a registration email.</p>
 </div></span>
   
 </li>
@@ -849,17 +913,15 @@ Verify a registration email.
     
   <div class="note notetag">
     <strong>Note:</strong> 
-    <div class='inline'><p>
-Chances are that if the Box api is updated or moves location, this class
+    <div class='inline'>
+<p>Chances are that if the Box api is updated or moves location, this class
 will no longer work. However, the option to change the defaults still
-remains.
-</p>
+remains.</p>
 </div>
   </div>
 
-<p>
-Create a new API object using the given parameters.
-</p>
+
+<p>Create a new API object using the given parameters.</p>
 
 
   </div>
@@ -878,11 +940,10 @@ Create a new API object using the given parameters.
       
       
         &mdash;
-        <div class='inline'><p>
-The api key for your application. You can request one on the Box developer
+        <div class='inline'>
+<p>The api key for your application. You can request one on the Box developer
 website at <a href="http://www.box.net/developers/services" target="_parent" title="http://www.box.net/developers/services">http://www.box.net/developers/services</a>. If an <span class='object_link'><a href="" title="Box::Api (class)">Box::Api</a></span> instance
-is passed instead, its key is used.
-</p>
+is passed instead, its key is used.</p>
 </div>
       
     </li>
@@ -899,9 +960,8 @@ is passed instead, its key is used.
       
       
         &mdash;
-        <div class='inline'><p>
-the url of the Box api.
-</p>
+        <div class='inline'>
+<p>the url of the Box api.</p>
 </div>
       
     </li>
@@ -918,9 +978,8 @@ the url of the Box api.
       
       
         &mdash;
-        <div class='inline'><p>
-the url of the upload host for the Box api.
-</p>
+        <div class='inline'>
+<p>the url of the upload host for the Box api.</p>
 </div>
       
     </li>
@@ -937,14 +996,14 @@ the url of the upload host for the Box api.
       
       
         &mdash;
-        <div class='inline'><p>
-the version of the Box api in use.
-</p>
+        <div class='inline'>
+<p>the version of the Box api in use.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -990,15 +1049,15 @@ the version of the Box api in use.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The base url of the box api.
-</p>
+    
+<p>The base url of the box api.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -1009,9 +1068,8 @@ The base url of the box api.
       
       
         &mdash;
-        <div class='inline'><p>
-The base url of the box api.
-</p>
+        <div class='inline'>
+<p>The base url of the box api.</p>
 </div>
       
     </li>
@@ -1051,15 +1109,15 @@ The base url of the box api.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-The upload url of the box api.
-</p>
+    
+<p>The upload url of the box api.</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
@@ -1070,9 +1128,8 @@ The upload url of the box api.
       
       
         &mdash;
-        <div class='inline'><p>
-The upload url of the box api.
-</p>
+        <div class='inline'>
+<p>The upload url of the box api.</p>
 </div>
       
     </li>
@@ -1116,9 +1173,8 @@ The upload url of the box api.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Given a status, returning a cooresponding Exception class.
-</p>
+    
+<p>Given a status, returning a cooresponding Exception class.</p>
 
 
   </div>
@@ -1137,14 +1193,14 @@ Given a status, returning a cooresponding Exception class.
       
       
         &mdash;
-        <div class='inline'><p>
-The failing status to look for.
-</p>
+        <div class='inline'>
+<p>The failing status to look for.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -1156,9 +1212,8 @@ The failing status to look for.
       
       
         &mdash;
-        <div class='inline'><p>
-A coorespondng Exception.
-</p>
+        <div class='inline'>
+<p>A coorespondng Exception.</p>
 </div>
       
     </li>
@@ -1212,7 +1267,10 @@ A coorespondng Exception.
 74
 75
 76
-77</pre>
+77
+78
+79
+80</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/box/api/exceptions.rb', line 36</span>
@@ -1255,6 +1313,9 @@ A coorespondng Exception.
     <span class='const'>AccountExceeded</span>
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>filesize_limit_exceeded</span><span class='tstring_end'>&quot;</span></span>
     <span class='const'>SizeExceeded</span>
+  <span class='comment'># Comment specific responses
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_comments_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>add_comment_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>delete_comment_error</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>Generic</span>
   <span class='kw'>else</span>
     <span class='const'>Unknown</span>
   <span class='kw'>end</span>
@@ -1271,26 +1332,16 @@ A coorespondng Exception.
     
     
       <div class="method_details first">
-  <p class="signature first" id="copy-instance_method">
+  <p class="signature first" id="add_comment-instance_method">
   
-    - (<tt>Object</tt>) <strong>copy</strong>(target, target_id, destination_id) 
+    - (<tt>Object</tt>) <strong>add_comment</strong>(target, target_id, message) 
   
 
   
 </p><div class="docstring">
   <div class="discussion">
     
-  <div class="note notetag">
-    <strong>Note:</strong> 
-    <div class='inline'><p>
-The api currently only supports copying files.
-</p>
-</div>
-  </div>
-
-<p>
-Copy the the item to a new destination.
-</p>
+<p>Adds a new comment to the given item.</p>
 
 
   </div>
@@ -1309,9 +1360,8 @@ Copy the the item to a new destination.
       
       
         &mdash;
-        <div class='inline'><p>
-The type of item.
-</p>
+        <div class='inline'>
+<p>The type of item.</p>
 </div>
       
     </li>
@@ -1326,9 +1376,107 @@ The type of item.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the item to copy.
-</p>
+        <div class='inline'>
+<p>The id of the item to add to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The message to use.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 315</span>
+
+<span class='kw'>def</span> <span class='id add_comment'>add_comment</span><span class='lparen'>(</span><span class='id target'>target</span><span class='comma'>,</span> <span class='id target_id'>target_id</span><span class='comma'>,</span> <span class='id message'>message</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>add_comment_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:add_comment</span><span class='comma'>,</span> <span class='symbol'>:target</span> <span class='op'>=&gt;</span> <span class='id target'>target</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id target_id'>target_id</span><span class='comma'>,</span> <span class='symbol'>:message</span> <span class='op'>=&gt;</span> <span class='id message'>message</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="copy-instance_method">
+  
+    - (<tt>Object</tt>) <strong>copy</strong>(target, target_id, destination_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong> 
+    <div class='inline'>
+<p>The api currently only supports copying files.</p>
+</div>
+  </div>
+
+
+<p>Copy the the item to a new destination.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>"file"</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The type of item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the item to copy.</p>
 </div>
       
     </li>
@@ -1343,14 +1491,14 @@ The id of the item to copy.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the parent to copy to.
-</p>
+        <div class='inline'>
+<p>The id of the parent to copy to.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1382,9 +1530,8 @@ The id of the parent to copy to.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Create a new folder.
-</p>
+    
+<p>Create a new folder.</p>
 
 
   </div>
@@ -1403,9 +1550,8 @@ Create a new folder.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the parent folder to use.
-</p>
+        <div class='inline'>
+<p>The id of the parent folder to use.</p>
 </div>
       
     </li>
@@ -1420,9 +1566,8 @@ The id of the parent folder to use.
       
       
         &mdash;
-        <div class='inline'><p>
-The name of the newly created folder.
-</p>
+        <div class='inline'>
+<p>The name of the newly created folder.</p>
 </div>
       
     </li>
@@ -1437,14 +1582,14 @@ The name of the newly created folder.
       
       
         &mdash;
-        <div class='inline'><p>
-The shared state of the new folder.
-</p>
+        <div class='inline'>
+<p>The shared state of the new folder.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1476,9 +1621,8 @@ The shared state of the new folder.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Delete the item.
-</p>
+    
+<p>Delete the item.</p>
 
 
   </div>
@@ -1497,9 +1641,8 @@ Delete the item.
       
       
         &mdash;
-        <div class='inline'><p>
-The type of item.
-</p>
+        <div class='inline'>
+<p>The type of item.</p>
 </div>
       
     </li>
@@ -1514,14 +1657,14 @@ The type of item.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the item to delete.
-</p>
+        <div class='inline'>
+<p>The id of the item to delete.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1545,6 +1688,65 @@ The id of the item to delete.
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="delete_comment-instance_method">
+  
+    - (<tt>Object</tt>) <strong>delete_comment</strong>(comment_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Deletes a given comment.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>comment_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the comment to delete.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+322
+323
+324</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 322</span>
+
+<span class='kw'>def</span> <span class='id delete_comment'>delete_comment</span><span class='lparen'>(</span><span class='id comment_id'>comment_id</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>delete_comment_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:delete_comment</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id comment_id'>comment_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="download-instance_method">
   
     - (<tt>Object</tt>) <strong>download</strong>(path, file_id, version = nil) 
@@ -1556,15 +1758,13 @@ The id of the item to delete.
     
   <div class="note notetag">
     <strong>Note:</strong> 
-    <div class='inline'><p>
-You cannot download folders.
-</p>
+    <div class='inline'>
+<p>You cannot download folders.</p>
 </div>
   </div>
 
-<p>
-Download the file to the given path.
-</p>
+
+<p>Download the file to the given path.</p>
 
 
   </div>
@@ -1583,9 +1783,8 @@ Download the file to the given path.
       
       
         &mdash;
-        <div class='inline'><p>
-The path to write the file to.
-</p>
+        <div class='inline'>
+<p>The path to write the file to.</p>
 </div>
       
     </li>
@@ -1600,9 +1799,8 @@ The path to write the file to.
       
       
         &mdash;
-        <div class='inline'><p>
-The file id to download.
-</p>
+        <div class='inline'>
+<p>The file id to download.</p>
 </div>
       
     </li>
@@ -1619,14 +1817,14 @@ The file id to download.
       
       
         &mdash;
-        <div class='inline'><p>
-The version of the file to download.
-</p>
+        <div class='inline'>
+<p>The version of the file to download.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1654,6 +1852,84 @@ The version of the file to download.
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="file_embed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>file_embed</strong>(id, options = Hash.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Request the HTML embed code for a file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the file to use.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The properties for the generated preview code. See File#embed_code for a
+more detailed list of options.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+331
+332
+333</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 331</span>
+
+<span class='kw'>def</span> <span class='id file_embed'>file_embed</span><span class='lparen'>(</span><span class='id id'>id</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s_create_file_embed</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:create_file_embed</span><span class='comma'>,</span> <span class='symbol'>:file_id</span> <span class='op'>=&gt;</span> <span class='id id'>id</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span><span class='id options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="get_account_info-instance_method">
   
     - (<tt>Object</tt>) <strong>get_account_info</strong> 
@@ -1662,15 +1938,15 @@ The version of the file to download.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Get the user&#8217;s account info.
-</p>
+    
+<p>Get the user's account info.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -1704,27 +1980,23 @@ Get the user&#8217;s account info.
     
   <div class="note todo">
     <strong>TODO:</strong> 
-    <div class='inline'><p>
-Use zip compression to save bandwidth.
-</p>
+    <div class='inline'>
+<p>Use zip compression to save bandwidth.</p>
 </div>
   </div>
 
 
   <div class="note notetag">
     <strong>Note:</strong> 
-    <div class='inline'><p>
-This function can take a long time for large folders.
-</p>
+    <div class='inline'>
+<p>This function can take a long time for large folders.</p>
 </div>
   </div>
 
-<p>
-Get the entire tree of a given folder.
-</p>
-<p>
-TODO: document the possible arguments.
-</p>
+
+<p>Get the entire tree of a given folder.</p>
+
+<p>TODO: document the possible arguments.</p>
 
 
   </div>
@@ -1743,9 +2015,8 @@ TODO: document the possible arguments.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the folder to use.
-</p>
+        <div class='inline'>
+<p>The id of the folder to use.</p>
 </div>
       
     </li>
@@ -1760,14 +2031,14 @@ The id of the folder to use.
       
       
         &mdash;
-        <div class='inline'><p>
-The arguments to pass along to get_account_tree.
-</p>
+        <div class='inline'>
+<p>The arguments to pass along to get_account_tree.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1799,9 +2070,8 @@ The arguments to pass along to get_account_tree.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Request an auth token given a ticket.
-</p>
+    
+<p>Request an auth token given a ticket.</p>
 
 
   </div>
@@ -1820,14 +2090,14 @@ Request an auth token given a ticket.
       
       
         &mdash;
-        <div class='inline'><p>
-the ticket to use.
-</p>
+        <div class='inline'>
+<p>the ticket to use.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1851,6 +2121,81 @@ the ticket to use.
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="get_comments-instance_method">
+  
+    - (<tt>Object</tt>) <strong>get_comments</strong>(target, target_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Gets the comments posted on the given item.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>"file"</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The type of item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the item to get.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+306
+307
+308</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 306</span>
+
+<span class='kw'>def</span> <span class='id get_comments'>get_comments</span><span class='lparen'>(</span><span class='id target'>target</span><span class='comma'>,</span> <span class='id target_id'>target_id</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>get_comments_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:get_comments</span><span class='comma'>,</span> <span class='symbol'>:target</span> <span class='op'>=&gt;</span> <span class='id target'>target</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id target_id'>target_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="get_file_info-instance_method">
   
     - (<tt>Object</tt>) <strong>get_file_info</strong>(file_id) 
@@ -1859,9 +2204,8 @@ the ticket to use.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Get the file info.
-</p>
+    
+<p>Get the file info.</p>
 
 
   </div>
@@ -1880,14 +2224,14 @@ Get the file info.
       
       
         &mdash;
-        <div class='inline'><p>
-The file id to get info for.
-</p>
+        <div class='inline'>
+<p>The file id to get info for.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -1919,15 +2263,15 @@ The file id to get info for.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Request a ticket for authorization
-</p>
+    
+<p>Request a ticket for authorization</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -1958,9 +2302,8 @@ Request a ticket for authorization
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Handle the response of the request.
-</p>
+    
+<p>Handle the response of the request.</p>
 
 
   </div>
@@ -1979,9 +2322,8 @@ Handle the response of the request.
       
       
         &mdash;
-        <div class='inline'><p>
-The parsed representation of the XML response.
-</p>
+        <div class='inline'>
+<p>The parsed representation of the XML response.</p>
 </div>
       
     </li>
@@ -1998,15 +2340,15 @@ The parsed representation of the XML response.
       
       
         &mdash;
-        <div class='inline'><p>
-the normal status expected to be returned. If the actual status does not
-match, an exception is thrown.
-</p>
+        <div class='inline'>
+<p>the normal status expected to be returned. If the actual status does not
+match, an exception is thrown.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -2018,9 +2360,8 @@ match, an exception is thrown.
       
       
         &mdash;
-        <div class='inline'><p>
-The response if no errors were found.
-</p>
+        <div class='inline'>
+<p>The response if no errors were found.</p>
 </div>
       
     </li>
@@ -2037,10 +2378,9 @@ The response if no errors were found.
       
       
         &mdash;
-        <div class='inline'><p>
-Raises an exception if the response status does not match the expected.
-This exception is determined by <span class='object_link'><a href="#get_exception-class_method" title="Box::Api.get_exception (method)">get_exception</a></span>
-</p>
+        <div class='inline'>
+<p>Raises an exception if the response status does not match the expected.
+This exception is determined by <span class='object_link'><a href="#get_exception-class_method" title="Box::Api.get_exception (method)">get_exception</a></span></p>
 </div>
       
     </li>
@@ -2088,7 +2428,7 @@ This exception is determined by <span class='object_link'><a href="#get_exceptio
     <span class='kw'>end</span>
   <span class='kw'>end</span>
 
-  <span class='id raise'>raise</span> <span class='const'>ErrorStatus</span><span class='comma'>,</span> <span class='id response'>response</span><span class='period'>.</span><span class='id code'>code</span> <span class='kw'>unless</span> <span class='id response'>response</span><span class='period'>.</span><span class='id success?'>success?</span> <span class='comment'># when the http return code is not normal
+  <span class='id raise'>raise</span> <span class='const'>ErrorStatus</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HTTP code </span><span class='embexpr_beg'>#{</span> <span class='id response'>response</span><span class='period'>.</span><span class='id code'>code</span> <span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id response'>response</span><span class='period'>.</span><span class='id success?'>success?</span> <span class='comment'># when the http return code is not normal
 </span>  <span class='id response'>response</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2105,15 +2445,15 @@ This exception is determined by <span class='object_link'><a href="#get_exceptio
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Request the user be logged out.
-</p>
+    
+<p>Request the user be logged out.</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -2144,9 +2484,8 @@ Request the user be logged out.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Move the item to a new destination.
-</p>
+    
+<p>Move the item to a new destination.</p>
 
 
   </div>
@@ -2165,9 +2504,8 @@ Move the item to a new destination.
       
       
         &mdash;
-        <div class='inline'><p>
-The type of item.
-</p>
+        <div class='inline'>
+<p>The type of item.</p>
 </div>
       
     </li>
@@ -2182,9 +2520,8 @@ The type of item.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the item to move.
-</p>
+        <div class='inline'>
+<p>The id of the item to move.</p>
 </div>
       
     </li>
@@ -2199,14 +2536,14 @@ The id of the item to move.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the parent to move to.
-</p>
+        <div class='inline'>
+<p>The id of the parent to move to.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -2238,12 +2575,10 @@ The id of the parent to move to.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Upload a new copy of the given file.
-</p>
-<p>
-TODO: Verfiy this does what I think it does
-</p>
+    
+<p>Upload a new copy of the given file.</p>
+
+<p>TODO: Verfiy this does what I think it does</p>
 
 
   </div>
@@ -2262,9 +2597,8 @@ TODO: Verfiy this does what I think it does
       
       
         &mdash;
-        <div class='inline'><p>
-(see #upload)
-</p>
+        <div class='inline'>
+<p>(see #upload)</p>
 </div>
       
     </li>
@@ -2279,9 +2613,8 @@ TODO: Verfiy this does what I think it does
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the file to copy.
-</p>
+        <div class='inline'>
+<p>The id of the file to copy.</p>
 </div>
       
     </li>
@@ -2298,14 +2631,14 @@ The id of the file to copy.
       
       
         &mdash;
-        <div class='inline'><p>
-Use a new name as well.
-</p>
+        <div class='inline'>
+<p>Use a new name as well.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -2313,12 +2646,12 @@ Use a new name as well.
       <pre class="lines">
 
 
-296
-297
-298</pre>
+298
+299
+300</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 296</span>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 298</span>
 
 <span class='kw'>def</span> <span class='id new_copy'>new_copy</span><span class='lparen'>(</span><span class='id path'>path</span><span class='comma'>,</span> <span class='id file_id'>file_id</span><span class='comma'>,</span> <span class='id name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id query_upload'>query_upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>new_copy</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id file_id'>file_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:file</span> <span class='op'>=&gt;</span> <span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:new_file_name</span> <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='rparen'>)</span>
@@ -2337,9 +2670,8 @@ Use a new name as well.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Overwrite the given file with a new one.
-</p>
+    
+<p>Overwrite the given file with a new one.</p>
 
 
   </div>
@@ -2353,14 +2685,13 @@ Overwrite the given file with a new one.
         <span class='name'>path</span>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt>String</tt>, <tt><span class='object_link'><a href="File.html" title="Box::File (class)">File</a></span> or UploadIO</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-(see #upload)
-</p>
+        <div class='inline'>
+<p>(see #upload)</p>
 </div>
       
     </li>
@@ -2375,9 +2706,8 @@ Overwrite the given file with a new one.
       
       
         &mdash;
-        <div class='inline'><p>
-Replace the file with this id.
-</p>
+        <div class='inline'>
+<p>Replace the file with this id.</p>
 </div>
       
     </li>
@@ -2394,14 +2724,14 @@ Replace the file with this id.
       
       
         &mdash;
-        <div class='inline'><p>
-Use a new name as well.
-</p>
+        <div class='inline'>
+<p>Use a new name as well.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -2409,15 +2739,17 @@ Use a new name as well.
       <pre class="lines">
 
 
-286
 287
-288</pre>
+288
+289
+290</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 287</span>
 
 <span class='kw'>def</span> <span class='id overwrite'>overwrite</span><span class='lparen'>(</span><span class='id path'>path</span><span class='comma'>,</span> <span class='id file_id'>file_id</span><span class='comma'>,</span> <span class='id name'>name</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id query_upload'>query_upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>overwrite</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id file_id'>file_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:file</span> <span class='op'>=&gt;</span> <span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:file_name</span> <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='rparen'>)</span>
+  <span class='id path'>path</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id path'>path</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>UploadIO</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id path'>path</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>File</span><span class='rparen'>)</span>
+  <span class='id query_upload'>query_upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>overwrite</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id file_id'>file_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:file</span> <span class='op'>=&gt;</span> <span class='id path'>path</span><span class='comma'>,</span> <span class='symbol'>:file_name</span> <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2433,9 +2765,8 @@ Use a new name as well.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Make a download request.
-</p>
+    
+<p>Make a download request.</p>
 
 
   </div>
@@ -2454,9 +2785,8 @@ Make a download request.
       
       
         &mdash;
-        <div class='inline'><p>
-the operation to be performed (&#8220;download&#8221;).
-</p>
+        <div class='inline'>
+<p>the operation to be performed ("download").</p>
 </div>
       
     </li>
@@ -2471,9 +2801,8 @@ the operation to be performed (&#8220;download&#8221;).
       
       
         &mdash;
-        <div class='inline'><p>
-an array of arguments to put in the url.
-</p>
+        <div class='inline'>
+<p>an array of arguments to put in the url.</p>
 </div>
       
     </li>
@@ -2490,14 +2819,14 @@ an array of arguments to put in the url.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_rest)
-</p>
+        <div class='inline'>
+<p>(see #query_rest)</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -2509,9 +2838,8 @@ an array of arguments to put in the url.
       
       
         
-        <div class='inline'><p>
-The raw binary data of the file.
-</p>
+        <div class='inline'>
+<p>The raw binary data of the file.</p>
 </div>
       
     </li>
@@ -2552,14 +2880,12 @@ The raw binary data of the file.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Make a raw request.
-</p>
-<p>
-@note: HTTParty will automatically parse the response from its native
-</p>
-<pre class="code">
-       XML to a nested hash/array structure.</pre>
+    
+<p>Make a raw request.</p>
+
+<p>@note: HTTParty will automatically parse the response from its native</p>
+
+<pre class="code">XML to a nested hash/array structure.</pre>
 
 
   </div>
@@ -2578,9 +2904,8 @@ Make a raw request.
       
       
         &mdash;
-        <div class='inline'><p>
-The HTTP method to use.
-</p>
+        <div class='inline'>
+<p>The HTTP method to use.</p>
 </div>
       
     </li>
@@ -2595,9 +2920,8 @@ The HTTP method to use.
       
       
         &mdash;
-        <div class='inline'><p>
-The url to make the request.
-</p>
+        <div class='inline'>
+<p>The url to make the request.</p>
 </div>
       
     </li>
@@ -2612,9 +2936,8 @@ The url to make the request.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_rest)
-</p>
+        <div class='inline'>
+<p>(see #query_rest)</p>
 </div>
       
     </li>
@@ -2631,14 +2954,14 @@ The url to make the request.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_rest)
-</p>
+        <div class='inline'>
+<p>(see #query_rest)</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -2650,9 +2973,8 @@ The url to make the request.
       
       
         &mdash;
-        <div class='inline'><p>
-A parsed version of the XML response.
-</p>
+        <div class='inline'>
+<p>A parsed version of the XML response.</p>
 </div>
       
     </li>
@@ -2703,9 +3025,8 @@ A parsed version of the XML response.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Make a normal REST request.
-</p>
+    
+<p>Make a normal REST request.</p>
 
 
   </div>
@@ -2724,10 +3045,9 @@ Make a normal REST request.
       
       
         &mdash;
-        <div class='inline'><p>
-the normal status expected to be returned. If the actual status does not
-match, an exception is thrown.
-</p>
+        <div class='inline'>
+<p>the normal status expected to be returned. If the actual status does not
+match, an exception is thrown.</p>
 </div>
       
     </li>
@@ -2744,16 +3064,16 @@ match, an exception is thrown.
       
       
         &mdash;
-        <div class='inline'><p>
-The parameters that wish to be passed in the request. These should
+        <div class='inline'>
+<p>The parameters that wish to be passed in the request. These should
 coorespond to the api specifications, and will be passed along with the api
-key and auth token.
-</p>
+key and auth token.</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -2765,9 +3085,8 @@ key and auth token.
       
       
         &mdash;
-        <div class='inline'><p>
-A parsed version of the XML response.
-</p>
+        <div class='inline'>
+<p>A parsed version of the XML response.</p>
 </div>
       
     </li>
@@ -2804,9 +3123,8 @@ A parsed version of the XML response.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Make an upload request.
-</p>
+    
+<p>Make an upload request.</p>
 
 
   </div>
@@ -2825,9 +3143,8 @@ Make an upload request.
       
       
         &mdash;
-        <div class='inline'><p>
-The operation to be performed.
-</p>
+        <div class='inline'>
+<p>The operation to be performed.</p>
 </div>
       
     </li>
@@ -2842,9 +3159,8 @@ The operation to be performed.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_download)
-</p>
+        <div class='inline'>
+<p>(see #query_download)</p>
 </div>
       
     </li>
@@ -2859,9 +3175,8 @@ The operation to be performed.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_rest)
-</p>
+        <div class='inline'>
+<p>(see #query_rest)</p>
 </div>
       
     </li>
@@ -2878,14 +3193,14 @@ The operation to be performed.
       
       
         &mdash;
-        <div class='inline'><p>
-(see #query_rest)
-</p>
+        <div class='inline'>
+<p>(see #query_rest)</p>
 </div>
       
     </li>
   
 </ul>
+
 <h3>Returns:</h3>
 <ul class="return">
   
@@ -2897,9 +3212,8 @@ The operation to be performed.
       
       
         &mdash;
-        <div class='inline'><p>
-A parsed version of the XML response.
-</p>
+        <div class='inline'>
+<p>A parsed version of the XML response.</p>
 </div>
       
     </li>
@@ -2940,9 +3254,8 @@ A parsed version of the XML response.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Register a new user.
-</p>
+    
+<p>Register a new user.</p>
 
 
   </div>
@@ -2961,9 +3274,8 @@ Register a new user.
       
       
         &mdash;
-        <div class='inline'><p>
-The email address to use.
-</p>
+        <div class='inline'>
+<p>The email address to use.</p>
 </div>
       
     </li>
@@ -2978,14 +3290,14 @@ The email address to use.
       
       
         &mdash;
-        <div class='inline'><p>
-The password to use.
-</p>
+        <div class='inline'>
+<p>The password to use.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3017,9 +3329,8 @@ The password to use.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Rename the item.
-</p>
+    
+<p>Rename the item.</p>
 
 
   </div>
@@ -3038,9 +3349,8 @@ Rename the item.
       
       
         &mdash;
-        <div class='inline'><p>
-The type of item.
-</p>
+        <div class='inline'>
+<p>The type of item.</p>
 </div>
       
     </li>
@@ -3055,9 +3365,8 @@ The type of item.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the item to rename.
-</p>
+        <div class='inline'>
+<p>The id of the item to rename.</p>
 </div>
       
     </li>
@@ -3072,14 +3381,14 @@ The id of the item to rename.
       
       
         &mdash;
-        <div class='inline'><p>
-The new name to be used.
-</p>
+        <div class='inline'>
+<p>The new name to be used.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3111,9 +3420,8 @@ The new name to be used.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Add the auth token to every request.
-</p>
+    
+<p>Add the auth token to every request.</p>
 
 
   </div>
@@ -3132,14 +3440,14 @@ Add the auth token to every request.
       
       
         &mdash;
-        <div class='inline'><p>
-The auth token to add to every request.
-</p>
+        <div class='inline'>
+<p>The auth token to add to every request.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3173,9 +3481,8 @@ The auth token to add to every request.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Set the item description.
-</p>
+    
+<p>Set the item description.</p>
 
 
   </div>
@@ -3194,9 +3501,8 @@ Set the item description.
       
       
         &mdash;
-        <div class='inline'><p>
-The type of item.
-</p>
+        <div class='inline'>
+<p>The type of item.</p>
 </div>
       
     </li>
@@ -3211,9 +3517,8 @@ The type of item.
       
       
         &mdash;
-        <div class='inline'><p>
-The id of the item to describe.
-</p>
+        <div class='inline'>
+<p>The id of the item to describe.</p>
 </div>
       
     </li>
@@ -3228,14 +3533,14 @@ The id of the item to describe.
       
       
         &mdash;
-        <div class='inline'><p>
-The description to use.
-</p>
+        <div class='inline'>
+<p>The description to use.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3267,9 +3572,8 @@ The description to use.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Upload the file to the specified folder.
-</p>
+    
+<p>Upload the file to the specified folder.</p>
 
 
   </div>
@@ -3283,14 +3587,13 @@ Upload the file to the specified folder.
         <span class='name'>path</span>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt>String</tt>, <tt><span class='object_link'><a href="File.html" title="Box::File (class)">File</a></span> or UploadIO</tt>)</span>
       
       
       
         &mdash;
-        <div class='inline'><p>
-Upload the file at the given path.
-</p>
+        <div class='inline'>
+<p>Upload the file at the given path, or a File or UploadIO object..</p>
 </div>
       
     </li>
@@ -3305,9 +3608,8 @@ Upload the file at the given path.
       
       
         &mdash;
-        <div class='inline'><p>
-The folder id of the parent folder to use.
-</p>
+        <div class='inline'>
+<p>The folder id of the parent folder to use.</p>
 </div>
       
     </li>
@@ -3324,14 +3626,14 @@ The folder id of the parent folder to use.
       
       
         &mdash;
-        <div class='inline'><p>
-Upload a new copy instead of overwriting.
-</p>
+        <div class='inline'>
+<p>Upload a new copy instead of overwriting.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3341,13 +3643,15 @@ Upload a new copy instead of overwriting.
 
 277
 278
-279</pre>
+279
+280</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 277</span>
 
 <span class='kw'>def</span> <span class='id upload'>upload</span><span class='lparen'>(</span><span class='id path'>path</span><span class='comma'>,</span> <span class='id folder_id'>folder_id</span><span class='comma'>,</span> <span class='id new_copy'>new_copy</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id query_upload'>query_upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id folder_id'>folder_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:file</span> <span class='op'>=&gt;</span> <span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:new_copy</span> <span class='op'>=&gt;</span> <span class='id new_copy'>new_copy</span><span class='rparen'>)</span>
+  <span class='id path'>path</span> <span class='op'>=</span> <span class='op'>::</span><span class='const'>File</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id path'>path</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id path'>path</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>UploadIO</span><span class='rparen'>)</span> <span class='kw'>or</span> <span class='id path'>path</span><span class='period'>.</span><span class='id is_a?'>is_a?</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>File</span><span class='rparen'>)</span>
+  <span class='id query_upload'>query_upload</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id folder_id'>folder_id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>upload_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:file</span> <span class='op'>=&gt;</span> <span class='id path'>path</span><span class='comma'>,</span> <span class='symbol'>:new_copy</span> <span class='op'>=&gt;</span> <span class='id new_copy'>new_copy</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3363,9 +3667,8 @@ Upload a new copy instead of overwriting.
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
-Verify a registration email.
-</p>
+    
+<p>Verify a registration email.</p>
 
 
   </div>
@@ -3384,14 +3687,14 @@ Verify a registration email.
       
       
         &mdash;
-        <div class='inline'><p>
-The email address to check.
-</p>
+        <div class='inline'>
+<p>The email address to check.</p>
 </div>
       
     </li>
   
 </ul>
+
 
 </div><table class="source_code">
   <tr>
@@ -3419,9 +3722,9 @@ The email address to check.
 </div>
     
     <div id="footer">
-  Generated on Mon Aug  8 13:05:22 2011 by 
+  Generated on Tue Nov  8 15:32:23 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.2 (ruby-1.9.2).
+  0.7.3 (ruby-1.9.3).
 </div>
 
   </body>
