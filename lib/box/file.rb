@@ -60,6 +60,17 @@ module Box
       Comment.create(@api, response['comment']).first
     end
 
+    # Request the HTML embed code for this file.
+    #
+    # @param [Optional, Hash{:allow_download,:allow_print,:allow_share,
+    #        :width,:height,:color => String}] options Options to use
+    #        when generating the embed code.
+    # @return [String] HTML code to use to embed the file.
+    #
+    def embed_code(options = Hash.new)
+      @api.file_embed(id, options)['file_embed_html']
+    end
+
     protected
 
     # (see Item#get_info)

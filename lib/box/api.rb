@@ -322,5 +322,14 @@ module Box
     def delete_comment(comment_id)
       query_rest('delete_comment_ok', :action => :delete_comment, :target_id => comment_id)
     end
+
+    # Request the HTML embed code for a file.
+    #
+    # @param [String] id The id of the file to use.
+    # @param [Hash] options The properties for the generated preview code.
+    #        See File#embed_code for a more detailed list of options.
+    def file_embed(id, options = Hash.new)
+      query_rest('s_create_file_embed', { :action => :create_file_embed, :file_id => id }.merge(options))
+    end
   end
 end
