@@ -192,6 +192,10 @@ module Box
       super
     end
 
+    def respond_to?(sym)
+      @info.key?(sym.to_s) or super
+    end
+
     protected
 
     # @return [Api] The api currently in use.

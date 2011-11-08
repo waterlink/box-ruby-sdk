@@ -164,6 +164,11 @@ module Box
       super
     end
 
+    # Handles some cases in method_missing, but won't always be accurate.
+    def respond_to?(sym)
+      @data.key?(sym.to_s) or super
+    end
+
     # Consider the item cached. This prevents an additional api
     # when we know the item is fully fetched.
     def force_cached_info

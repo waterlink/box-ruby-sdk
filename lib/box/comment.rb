@@ -37,6 +37,10 @@ module Box
       super
     end
 
+    def respond_to?(sym)
+      @data.key?(sym.to_s) or super
+    end
+
     def delete
       @api.delete_comment(id)
 
