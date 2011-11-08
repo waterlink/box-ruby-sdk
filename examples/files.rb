@@ -1,5 +1,6 @@
-# log in using the login example, so we don't have to duplicate code
 $: << File.dirname(__FILE__) # for 1.9
+
+# log in using the login example, so we don't have to duplicate code
 require 'login'
 
 # get the root of the folder structure
@@ -16,18 +17,15 @@ index = gets
 
 begin
   # grab the folder they selected
-  # to_i or [] will throw an exception if the index is invalid or out of range respectively
   folder = root.folders[index.to_i]
 rescue
-  # they picked an invalid folder!
+  # they picked a folder that broke our script!
   puts "You picked an invalid folder, please try again."
   exit
 end
 
-# the folder they picked was valid
 puts "Excellent choice, here are the contents of that folder"
 
-# show the selected folder
 puts "FOLDER: #{ folder.name } (#{ folder.id })"
 
 # loop through and show each of the sub files and folders
