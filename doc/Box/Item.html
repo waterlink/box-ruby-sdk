@@ -542,6 +542,52 @@ instanciated directly.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#share_private-instance_method" title="#share_private (instance method)">- (Object) <strong>share_private</strong>(emails, options = Hash.new) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Shares this item privately with the given email addresses.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#share_public-instance_method" title="#share_public (instance method)">- (Object) <strong>share_public</strong>(options = Hash.new) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Generates a share link for this item.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#type-instance_method" title="#type (instance method)">- (String) <strong>type</strong> </a>
     
 
@@ -580,6 +626,29 @@ instanciated directly.</p>
   
     <span class="summary_desc"><div class='inline'>
 <p>The plural string representation of this item.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unshare-instance_method" title="#unshare (instance method)">- (Object) <strong>unshare</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Unshares this item.</p>
 </div></span>
   
 </li>
@@ -1815,6 +1884,172 @@ fetched from the api.</p>
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="share_private-instance_method">
+  
+    - (<tt>Object</tt>) <strong>share_private</strong>(emails, options = Hash.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Shares this item privately with the given email addresses.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>emails</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Box users to share this item with.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Special options related to notification. See the developer wiki for details
+instructions.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/item.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id share_private'>share_private</span><span class='lparen'>(</span><span class='id emails'>emails</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='rparen'>)</span>
+  <span class='ivar'>@api</span><span class='period'>.</span><span class='id share_private'>share_private</span><span class='lparen'>(</span><span class='id type'>type</span><span class='comma'>,</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id emails'>emails</span><span class='comma'>,</span> <span class='id options'>options</span><span class='rparen'>)</span>
+
+  <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="share_public-instance_method">
+  
+    - (<tt>Object</tt>) <strong>share_public</strong>(options = Hash.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Generates a share link for this item.</p>
+
+<p>TODO: Document the options.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Special options related to notification. See the developer wiki for details
+instructions.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>The public name of the item. In order to access this item on the web,
+prefix this value with '<a
+href="http://www.box.net/shared">www.box.net/shared</a>/'.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/item.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id share_public'>share_public</span><span class='lparen'>(</span><span class='id options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='rparen'>)</span>
+  <span class='ivar'>@api</span><span class='period'>.</span><span class='id share_public'>share_public</span><span class='lparen'>(</span><span class='id type'>type</span><span class='comma'>,</span> <span class='id id'>id</span><span class='comma'>,</span> <span class='id options'>options</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>public_name</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="type-instance_method">
   
     - (<tt>String</tt>) <strong>type</strong> 
@@ -1920,12 +2155,51 @@ fetched from the api.</p>
 </table>
 </div>
     
+      <div class="method_details ">
+  <p class="signature " id="unshare-instance_method">
+  
+    - (<tt>Object</tt>) <strong>unshare</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Unshares this item.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/item.rb', line 202</span>
+
+<span class='kw'>def</span> <span class='id unshare'>unshare</span>
+  <span class='ivar'>@api</span><span class='period'>.</span><span class='id unshare'>unshare</span><span class='lparen'>(</span><span class='id type'>type</span><span class='comma'>,</span> <span class='id id'>id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
     
     <div id="footer">
-  Generated on Tue Nov  8 15:32:23 2011 by 
+  Generated on Wed Nov  9 12:40:36 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>

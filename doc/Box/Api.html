@@ -117,7 +117,7 @@ perform. TODO: Link to the site.</p>
     
    
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Api/AccountExceeded.html" title="Box::Api::AccountExceeded (class)">AccountExceeded</a></span>, <span class='object_link'><a href="Api/EmailInvalid.html" title="Box::Api::EmailInvalid (class)">EmailInvalid</a></span>, <span class='object_link'><a href="Api/EmailTaken.html" title="Box::Api::EmailTaken (class)">EmailTaken</a></span>, <span class='object_link'><a href="Api/ErrorStatus.html" title="Box::Api::ErrorStatus (class)">ErrorStatus</a></span>, <span class='object_link'><a href="Api/Exception.html" title="Box::Api::Exception (class)">Exception</a></span>, <span class='object_link'><a href="Api/Generic.html" title="Box::Api::Generic (class)">Generic</a></span>, <span class='object_link'><a href="Api/InvalidFolder.html" title="Box::Api::InvalidFolder (class)">InvalidFolder</a></span>, <span class='object_link'><a href="Api/InvalidInput.html" title="Box::Api::InvalidInput (class)">InvalidInput</a></span>, <span class='object_link'><a href="Api/InvalidName.html" title="Box::Api::InvalidName (class)">InvalidName</a></span>, <span class='object_link'><a href="Api/NameTaken.html" title="Box::Api::NameTaken (class)">NameTaken</a></span>, <span class='object_link'><a href="Api/NoAccess.html" title="Box::Api::NoAccess (class)">NoAccess</a></span>, <span class='object_link'><a href="Api/NoParent.html" title="Box::Api::NoParent (class)">NoParent</a></span>, <span class='object_link'><a href="Api/NotAuthorized.html" title="Box::Api::NotAuthorized (class)">NotAuthorized</a></span>, <span class='object_link'><a href="Api/Restricted.html" title="Box::Api::Restricted (class)">Restricted</a></span>, <span class='object_link'><a href="Api/SizeExceeded.html" title="Box::Api::SizeExceeded (class)">SizeExceeded</a></span>, <span class='object_link'><a href="Api/Unknown.html" title="Box::Api::Unknown (class)">Unknown</a></span>, <span class='object_link'><a href="Api/UnknownResponse.html" title="Box::Api::UnknownResponse (class)">UnknownResponse</a></span>, <span class='object_link'><a href="Api/UploadFailed.html" title="Box::Api::UploadFailed (class)">UploadFailed</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Api/AccountExceeded.html" title="Box::Api::AccountExceeded (class)">AccountExceeded</a></span>, <span class='object_link'><a href="Api/EmailInvalid.html" title="Box::Api::EmailInvalid (class)">EmailInvalid</a></span>, <span class='object_link'><a href="Api/EmailTaken.html" title="Box::Api::EmailTaken (class)">EmailTaken</a></span>, <span class='object_link'><a href="Api/ErrorStatus.html" title="Box::Api::ErrorStatus (class)">ErrorStatus</a></span>, <span class='object_link'><a href="Api/Exception.html" title="Box::Api::Exception (class)">Exception</a></span>, <span class='object_link'><a href="Api/Generic.html" title="Box::Api::Generic (class)">Generic</a></span>, <span class='object_link'><a href="Api/InvalidFolder.html" title="Box::Api::InvalidFolder (class)">InvalidFolder</a></span>, <span class='object_link'><a href="Api/InvalidInput.html" title="Box::Api::InvalidInput (class)">InvalidInput</a></span>, <span class='object_link'><a href="Api/InvalidName.html" title="Box::Api::InvalidName (class)">InvalidName</a></span>, <span class='object_link'><a href="Api/NameTaken.html" title="Box::Api::NameTaken (class)">NameTaken</a></span>, <span class='object_link'><a href="Api/NoAccess.html" title="Box::Api::NoAccess (class)">NoAccess</a></span>, <span class='object_link'><a href="Api/NoParent.html" title="Box::Api::NoParent (class)">NoParent</a></span>, <span class='object_link'><a href="Api/NotAuthorized.html" title="Box::Api::NotAuthorized (class)">NotAuthorized</a></span>, <span class='object_link'><a href="Api/NotShared.html" title="Box::Api::NotShared (class)">NotShared</a></span>, <span class='object_link'><a href="Api/Restricted.html" title="Box::Api::Restricted (class)">Restricted</a></span>, <span class='object_link'><a href="Api/SizeExceeded.html" title="Box::Api::SizeExceeded (class)">SizeExceeded</a></span>, <span class='object_link'><a href="Api/Unknown.html" title="Box::Api::Unknown (class)">Unknown</a></span>, <span class='object_link'><a href="Api/UnknownResponse.html" title="Box::Api::UnknownResponse (class)">UnknownResponse</a></span>, <span class='object_link'><a href="Api/UploadFailed.html" title="Box::Api::UploadFailed (class)">UploadFailed</a></span>
     
   
 </p>
@@ -851,6 +851,75 @@ perform. TODO: Link to the site.</p>
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#share_private-instance_method" title="#share_private (instance method)">- (Object) <strong>share_private</strong>(target, target_id, emails, options = Hash.new) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Share an item privately, making it accessible only via email.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#share_public-instance_method" title="#share_public (instance method)">- (Object) <strong>share_public</strong>(target, target_id, options = Hash.new) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Share an item publically, making it accessible via a share link.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unshare_public-instance_method" title="#unshare_public (instance method)">- (Object) <strong>unshare_public</strong>(target, target_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Stop sharing an item publically.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#upload-instance_method" title="#upload (instance method)">- (Object) <strong>upload</strong>(path, folder_id, new_copy = false) </a>
     
 
@@ -1226,9 +1295,6 @@ is passed instead, its key is used.</p>
       <pre class="lines">
 
 
-36
-37
-38
 39
 40
 41
@@ -1270,10 +1336,22 @@ is passed instead, its key is used.</p>
 77
 78
 79
-80</pre>
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/box/api/exceptions.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/box/api/exceptions.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id get_exception'>get_exception</span><span class='lparen'>(</span><span class='id status'>status</span><span class='rparen'>)</span>
   <span class='kw'>case</span> <span class='id status'>status</span>
@@ -1294,7 +1372,9 @@ is passed instead, its key is used.</p>
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_auth_token_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>e_register</span><span class='tstring_end'>&quot;</span></span>
     <span class='const'>Generic</span>
   <span class='comment'># Folder/File specific responses
-</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>e_folder_id</span><span class='tstring_end'>&quot;</span></span>
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong_node</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>InvalidItem</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>e_folder_id</span><span class='tstring_end'>&quot;</span></span>
     <span class='const'>InvalidFolder</span>
   <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no_parent</span><span class='tstring_end'>&quot;</span></span>
     <span class='const'>NoParent</span>
@@ -1315,6 +1395,13 @@ is passed instead, its key is used.</p>
     <span class='const'>SizeExceeded</span>
   <span class='comment'># Comment specific responses
 </span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_comments_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>add_comment_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>delete_comment_error</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>Generic</span>
+  <span class='comment'># Sharing specific responses
+</span>  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>file_not_shared</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>NotShared</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrong input params</span><span class='tstring_end'>&quot;</span></span>
+    <span class='const'>InvalidInput</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>share_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>unshare_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>private_share_error</span><span class='tstring_end'>&quot;</span></span>
     <span class='const'>Generic</span>
   <span class='kw'>else</span>
     <span class='const'>Unknown</span>
@@ -3564,6 +3651,285 @@ key and auth token.</p>
 </div>
     
       <div class="method_details ">
+  <p class="signature " id="share_private-instance_method">
+  
+    - (<tt>Object</tt>) <strong>share_private</strong>(target, target_id, emails, options = Hash.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Share an item privately, making it accessible only via email.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The type of item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the item to share.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>emails</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The email addresses of the individuals to share with.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Extra options related to notifications. Please read the developer
+documentation for more details.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+353
+354
+355</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 353</span>
+
+<span class='kw'>def</span> <span class='id share_private'>share_private</span><span class='lparen'>(</span><span class='id target'>target</span><span class='comma'>,</span> <span class='id target_id'>target_id</span><span class='comma'>,</span> <span class='id emails'>emails</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>private_share_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:private_share</span><span class='comma'>,</span> <span class='symbol'>:target</span> <span class='op'>=&gt;</span> <span class='id target'>target</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id target_id'>target_id</span><span class='comma'>,</span> <span class='symbol'>:emails</span> <span class='op'>=&gt;</span> <span class='id emails'>emails</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span><span class='id options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="share_public-instance_method">
+  
+    - (<tt>Object</tt>) <strong>share_public</strong>(target, target_id, options = Hash.new) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Share an item publically, making it accessible via a share link.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The type of item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the item to share.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>Hash.new</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Extra options related to notifications. Please read the developer
+documentation for more details.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+341
+342
+343</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 341</span>
+
+<span class='kw'>def</span> <span class='id share_public'>share_public</span><span class='lparen'>(</span><span class='id target'>target</span><span class='comma'>,</span> <span class='id target_id'>target_id</span><span class='comma'>,</span> <span class='id options'>options</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id new'>new</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>share_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:public_share</span><span class='comma'>,</span> <span class='symbol'>:target</span> <span class='op'>=&gt;</span> <span class='id target'>target</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id target_id'>target_id</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id merge'>merge</span><span class='lparen'>(</span><span class='id options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="unshare_public-instance_method">
+  
+    - (<tt>Object</tt>) <strong>unshare_public</strong>(target, target_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Stop sharing an item publically.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>target</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The type of item.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>target_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The id of the item to unshare.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+361
+362
+363</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/box/api.rb', line 361</span>
+
+<span class='kw'>def</span> <span class='id unshare_public'>unshare_public</span><span class='lparen'>(</span><span class='id target'>target</span><span class='comma'>,</span> <span class='id target_id'>target_id</span><span class='rparen'>)</span>
+  <span class='id query_rest'>query_rest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>unshare_ok</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='symbol'>:public_unshare</span><span class='comma'>,</span> <span class='symbol'>:target</span> <span class='op'>=&gt;</span> <span class='id target'>target</span><span class='comma'>,</span> <span class='symbol'>:target_id</span> <span class='op'>=&gt;</span> <span class='id target_id'>target_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <p class="signature " id="upload-instance_method">
   
     - (<tt>Object</tt>) <strong>upload</strong>(path, folder_id, new_copy = false) 
@@ -3722,7 +4088,7 @@ key and auth token.</p>
 </div>
     
     <div id="footer">
-  Generated on Tue Nov  8 15:32:23 2011 by 
+  Generated on Wed Nov  9 12:40:36 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.3 (ruby-1.9.3).
 </div>
