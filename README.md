@@ -22,6 +22,8 @@ Once you have an API key, you are free to start using the box API! Check out the
 
 ### Documentation ###
 
+You can find documentation for this gem [here](http://rubydoc.info/gems/box-api/frames).
+
 You can find API documentation at [http://developers.box.net/](http://developers.box.net/). Full documentation regarding the Ruby library methods is coming soon.
 
 ### Support ###
