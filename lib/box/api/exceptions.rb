@@ -29,6 +29,9 @@ module Box
     class AccountExceeded < Exception; end
     class SizeExceeded < Exception; end
 
+    # Sharing specific responses
+    class NotShared < Exception; end
+
     # Given a status, returning a cooresponding Exception class.
     #
     # @param [String] status The failing status to look for.
@@ -52,6 +55,8 @@ module Box
       when "get_auth_token_error", "e_register"
         Generic
       # Folder/File specific responses
+      when "wrong_node"
+        InvalidItem
       when "e_folder_id"
         InvalidFolder
       when "no_parent"
@@ -73,6 +78,13 @@ module Box
         SizeExceeded
       # Comment specific responses
       when "get_comments_error", "add_comment_error", "delete_comment_error"
+        Generic
+      # Sharing specific responses
+      when "file_not_shared"
+        NotShared
+      when "wrong input params"
+        InvalidInput
+      when "share_error", "unshare_error", "private_share_error"
         Generic
       else
         Unknown

@@ -169,10 +169,38 @@ module Box
       @data.key?(sym.to_s) or super
     end
 
-    # Consider the item cached. This prevents an additional api
-    # when we know the item is fully fetched.
+    # Consider the item cached. This prevents an additional api when we
+    # know the item is fully fetched.
     def force_cached_info
       @cached_info = true
+    end
+
+    # Generates a share link for this item.
+    #
+    # @param [Hash] options Special options related to notification. See
+    #         the developer wiki for details instructions.
+    # @return The public name of the item. In order to access this item
+    #         on the web, prefix this value with 'http://www.box.net/shared/'.
+    #
+    # TODO: Document the options.
+    def share_public(options = Hash.new)
+      @api.share_public(type, id, options)['public_name']
+    end
+
+    # Shares this item privately with the given email addresses.
+    #
+    # @param [Array] emails The Box users to share this item with.
+    # @param [Hash] options Special options related to notification. See
+    #         the developer wiki for details instructions.
+    def share_private(emails, options = Hash.new)
+      @api.share_private(type, id, emails, options)
+
+      true
+    end
+
+    # Unshares this item.
+    def unshare
+      @api.unshare(type, id)
     end
 
     protected

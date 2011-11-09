@@ -67,8 +67,14 @@ module Box
     #        when generating the embed code.
     # @return [String] HTML code to use to embed the file.
     #
+    # @note This function will share the file if it is not already shared.
     def embed_code(options = Hash.new)
-      @api.file_embed(id, options)['file_embed_html']
+      begin
+        @api.file_embed(id, options)['file_embed_html']
+      rescue Api::NotShared
+        share_public
+        retry
+      end
     end
 
     protected

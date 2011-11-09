@@ -331,5 +331,35 @@ module Box
     def file_embed(id, options = Hash.new)
       query_rest('s_create_file_embed', { :action => :create_file_embed, :file_id => id }.merge(options))
     end
+
+    # Share an item publically, making it accessible via a share link.
+    #
+    # @param [String] target The type of item.
+    # @param [String] target_id The id of the item to share.
+    # @param [Hash] options Extra options related to notifications. Please
+    #        read the developer documentation for more details.
+    def share_public(target, target_id, options = Hash.new)
+      query_rest('share_ok', { :action => :public_share, :target => target, :target_id => target_id }.merge(options))
+    end
+
+    # Share an item privately, making it accessible only via email.
+    #
+    # @param [String] target The type of item.
+    # @param [String] target_id The id of the item to share.
+    # @param [Array] emails The email addresses of the individuals to share with.
+    # @param [Hash] options Extra options related to notifications. Please
+    #        read the developer documentation for more details.
+    #
+    def share_private(target, target_id, emails, options = Hash.new)
+      query_rest('private_share_ok', { :action => :private_share, :target => target, :target_id => target_id, :emails => emails }.merge(options))
+    end
+
+    # Stop sharing an item publically.
+    #
+    # @param [String] target The type of item.
+    # @param [String] target_id The id of the item to unshare.
+    def unshare_public(target, target_id)
+      query_rest('unshare_ok', :action => :public_unshare, :target => target, :target_id => target_id)
+    end
   end
 end
