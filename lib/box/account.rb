@@ -163,7 +163,39 @@ module Box
     #
     def root
       return @root if @root
-      @root = Box::Folder.new(@api, nil, :id => 0)
+      @root = folder(0)
+    end
+
+    # Gets a folder object by id.
+    #
+    # @param [String] id The id of the folder to fetch.
+    #
+    # @note This folder will not know its parent because of API
+    #       short-comings. If you need the tree above this folder, use
+    #       root.find(:type => 'folder', :id => id).first instead.
+    #
+    # @note This function will return a folder regardless of whether it
+    #       actually exists. You will get exceptions if you try to access
+    #       any info.
+    #
+    def folder(id)
+      Box::Folder.new(@api, nil, :id => id)
+    end
+
+    # Gets a file object by id.
+    #
+    # @param [String] id The id of the folder to fetch.
+    #
+    # @note This file will not know its parent because of API
+    #       short-comings. If you need the tree above this file, use
+    #       root.find(:type => 'file', :id => id).first instead.
+    #
+    # @note This function will return a file regardless of whether it
+    #       actually exists. You will get exceptions if you try to access
+    #       any info.
+    #
+    def file(id)
+      Box::File.new(@api, nil, :id => id)
     end
 
     # @return [Boolean] Is the account authorized?
