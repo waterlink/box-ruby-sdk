@@ -339,7 +339,7 @@ module Box
     # @param [Hash] options Extra options related to notifications. Please
     #        read the developer documentation for more details.
     def share_public(target, target_id, options = Hash.new)
-      query_rest('share_ok', { :action => :public_share, :target => target, :target_id => target_id }.merge(options))
+      query_rest('share_ok', { :action => :public_share, :target => target, :target_id => target_id, :password => "", :message => "", :emails => [ "" ] }.merge(options))
     end
 
     # Share an item privately, making it accessible only via email.
@@ -351,7 +351,7 @@ module Box
     #        read the developer documentation for more details.
     #
     def share_private(target, target_id, emails, options = Hash.new)
-      query_rest('private_share_ok', { :action => :private_share, :target => target, :target_id => target_id, :emails => emails }.merge(options))
+      query_rest('private_share_ok', { :action => :private_share, :target => target, :target_id => target_id, :emails => emails, :message => "", :notify => "" }.merge(options))
     end
 
     # Stop sharing an item publically.
