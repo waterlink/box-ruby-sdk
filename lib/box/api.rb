@@ -329,7 +329,7 @@ module Box
     # @param [Hash] options The properties for the generated preview code.
     #        See File#embed_code for a more detailed list of options.
     def file_embed(id, options = Hash.new)
-      query_rest('s_create_file_embed', { :action => :create_file_embed, :file_id => id }.merge(options))
+      query_rest('s_create_file_embed', :action => :create_file_embed, :file_id => id, :params => options)
     end
 
     # Share an item publically, making it accessible via a share link.
