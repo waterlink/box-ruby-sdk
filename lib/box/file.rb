@@ -12,7 +12,7 @@ module Box
     #
     # @param [String] path The path to write the file.
     def download(path=nil)
-      return @api.query_download([id, nil]) if path == nil
+      return @api.query_download([id, nil]).body if path == nil
       @api.download(path, id)
     end
 
