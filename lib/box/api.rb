@@ -264,7 +264,7 @@ module Box
     # @param [String] file_id The file id to download.
     # @param [Optional, String] version The version of the file to download.
     def download(path, file_id, version = nil)
-      ::File.open(path, 'w') do |file|
+      ::File.open(path, 'wb') do |file|
         file << query_download([ file_id, version ]) # write the response directly to file
       end
     end
