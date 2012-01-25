@@ -263,10 +263,8 @@ module Box
     # @param [String] path The path to write the file to.
     # @param [String] file_id The file id to download.
     # @param [Optional, String] version The version of the file to download.
-    def download(path, file_id, version = nil)
-      ::File.open(path, 'w') do |file|
-        file << query_download([ file_id, version ]) # write the response directly to file
-      end
+    def download(file_id, version = nil)
+      query_download([ file_id, version ])
     end
 
     # Upload the file to the specified folder.

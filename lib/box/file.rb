@@ -11,8 +11,12 @@ module Box
     # Download this file to the specified path.
     #
     # @param [String] path The path to write the file.
-    def download(path)
-      @api.download(path, id)
+    def download(path=nil)
+      data = @api.download([id, nil])
+      return data.body if path == nil
+      ::File.open(path, 'wb') do |file|
+        file << data
+      end
     end
 
     # Overwrite this file, using the file at the specified path
