@@ -274,7 +274,13 @@ module Box
     # @param [Optional, Boolean] new_copy Upload a new copy instead of overwriting.
     def upload(path, folder_id, new_copy = false)
       path = ::File.new(path) unless path.is_a?(::UploadIO) or path.is_a?(::File)
-      query_upload('upload', folder_id, 'upload_ok', :file => path, :new_copy => new_copy)
+
+      # We need to delete new_copy from the args if it is null or false.
+      # This is because of a bug with the API that considers any value as 'true'
+      options = { :file => path, :new_copy => new_copy }
+      options.delete(:new_copy) unless new_copy
+
+      query_upload('upload', folder_id, 'upload_ok', options)
     end
 
     # Overwrite the given file with a new one.

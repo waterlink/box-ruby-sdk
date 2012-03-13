@@ -46,6 +46,12 @@ describe Box::File do
       @dummy.name.should == 'dummy.test'
     end
 
+    it "overwrites a file by default" do
+      @test_root.files.should have(1).thing
+      @test_root.upload(@hello_file)
+      @test_root.files.should have(1).thing
+    end
+
     it "uploads a copy" do
       file = @dummy.upload_copy(@vegetables)
 
